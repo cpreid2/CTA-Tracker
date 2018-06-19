@@ -246,7 +246,7 @@ def data():
 
     Train_Data = []
     for line in CTA_Lines:
-        r = requests.get('http://lapi.transitchicago.com/api/1.0/ttpositions.aspx?key=973d5cc84055445e80c56d967c4a2bec&rt='+line+'&outputType=JSON')
+        r = requests.get('http://lapi.transitchicago.com/api/1.0/ttpositions.aspx?key=XYZ&rt='+line+'&outputType=JSON')
         data = json.loads(r.text)
         try:
             trains = data['ctatt']['route'][0]['train']
